@@ -10,26 +10,20 @@ const SampleForm = () => {
   return (
     <form action={sampleAction}>
       <div>
+        <label htmlFor="sample" className='block mb-1'>
+          Sample
+        </label>
         <input
           type="text"
+          id="sample"
           name="sample"
-          style={{
-            border: '1px solid #e2e8f0',
-            borderRadius: '5px',
-            padding: '4px',
-          }}
+          className="border border-gray-200 rounded-md p-1 block"
         />
       </div>
 
       <button
         disabled={pending}
-        style={{
-          marginTop: '1.5rem',
-          padding: '0.5rem 1rem',
-          backgroundColor: '#3b82f6',
-          color: 'white',
-          borderRadius: '5px',
-        }}
+        className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md"
       >
         {pending ? 'Loading...' : 'Submit'}
       </button>

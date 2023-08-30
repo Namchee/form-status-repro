@@ -1,10 +1,6 @@
-import SampleForm from '@/component/form';
+import SampleForm from '@/components/form';
 
-import { sleep } from '@/utils/sleep';
-
-export default async function Home() {
-  await sleep();
-  
+export default function Home() {
   return (
     <main className="w-screen h-screen bg-white p-4">
       <SampleForm />
