@@ -5,12 +5,10 @@ import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 import { sampleAction } from '@/action/sample';
 
 const SampleForm = () => {
-  const { pending } = useFormStatus();
-
   return (
     <form action={sampleAction}>
       <div>
-        <label htmlFor="sample" className='block mb-1'>
+        <label htmlFor="sample" className="block mb-1">
           Sample
         </label>
         <input
@@ -21,13 +19,21 @@ const SampleForm = () => {
         />
       </div>
 
-      <button
-        disabled={pending}
-        className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md"
-      >
-        {pending ? 'Loading...' : 'Submit'}
-      </button>
+      <Button />
     </form>
+  );
+};
+
+const Button = () => {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      disabled={pending}
+      className="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md"
+    >
+      {pending ? 'Loading...' : 'Submit'}
+    </button>
   );
 };
 

@@ -1,5 +1,3 @@
-'use server';
-
 import { sleep } from '@/utils/sleep';
 
 export async function sampleAction() {
